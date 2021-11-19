@@ -76,3 +76,5 @@ INSERT INTO profesor VALUES(101112, "Luis Carlos", "M", "Activo", "Planta", "198
 INSERT INTO Carrera VALUES(22190, "Antropologia", 3 , "Presencial", 789)
 
 INSERT INTO Practica VALUES(131415, "Mi casa", "2021-11-30", "2023-05-15", 3.5, "Virtual", 123, 22190)
+
+INSERT INTO Estudiante (CodEstudiante, Nombre, FechaNac, Direccion, Email, Genero) VALUES(333, "Alberto", "2003-12-30", "Cra 5", "albertosoccer@gmail.com", "M")
