@@ -35,3 +35,28 @@ CREATE TABLE jugadores (
     FOREIGN KEY (FkCodSeleccion) REFERENCES selecciones (codigo)
 
 );
+
+CREATE TABLE CampeonatoSelecciones (
+    IDCampeonato INT(11) NOT NULL,
+    CodigoSelecciones INT(11) NOT NULL,
+    PRIMARY KEY (IDCampeonato, CodigoSelecciones),
+    FOREIGN KEY (IDCampeonato) REFERENCES campeonato (IdCampeonato),
+    FOREIGN KEY (CodigoSelecciones) REFERENCES selecciones (codigo)
+);
+
+CREATE TABLE SeleccionesPartidos (
+    CodigoSelecciones INT(11) NOT NULL,
+    IDPartido INT(11) NOT NULL,
+    PRIMARY KEY (CodigoSelecciones, IDPartido),
+    FOREIGN KEY (CodigoSelecciones) REFERENCES selecciones (codigo),
+    FOREIGN KEY (IDPartido) REFERENCES partidos (IdPartido)
+);
+
+CREATE TABLE JugadoresPartidos (
+    DocJugador INT(11) NOT NULL,
+    IDPartido INT (11) NOT NULL,
+    Goles INT (20),
+    PRIMARY KEY (DocJugador, IDPartido),
+    FOREIGN KEY (DocJugador) REFERENCES jugadores (documento),
+    FOREIGN KEY (IDPartido) REFERENCES partidos (IdPartido)
+);

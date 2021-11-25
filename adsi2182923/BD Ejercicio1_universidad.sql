@@ -36,3 +36,21 @@ CREATE TABLE curso (
     FkDocumentoEst INT(11) NOT NULL,
     FOREIGN KEY (FkDocumentoEst) REFERENCES alumno (documento)
 );
+
+CREATE TABLE alumnoAsignatura (
+    documentoEstudiante INT(11) NOT NULL ,
+    IDAsignatura INT(11) NOT NULL ,
+    PRIMARY KEY (documentoEstudiante, IDAsignatura),
+    FOREIGN KEY (documentoEstudiante) REFERENCES alumno (documento),
+    FOREIGN KEY (IDAsignatura) REFERENCES asignaturas (ID)
+    
+
+);
+
+CREATE TABLE cursoAsignatura (
+    numIdenti INT(11) NOT NULL,
+    IDAsign INT(11) NOT NULL,
+    PRIMARY KEY (numIdenti, IDAsign),
+    FOREIGN KEY (numIdenti) REFERENCES curso (numIdent),
+    FOREIGN KEY (IDAsign) REFERENCES asignaturas (ID)
+);
