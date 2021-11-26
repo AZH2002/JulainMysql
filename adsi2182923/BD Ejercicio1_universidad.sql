@@ -54,3 +54,8 @@ CREATE TABLE cursoAsignatura (
     FOREIGN KEY (numIdenti) REFERENCES curso (numIdent),
     FOREIGN KEY (IDAsign) REFERENCES asignaturas (ID)
 );
+
+INSERT INTO alumno VALUES(12345, "Alberto", 3147170906, "M", "2002-11-20" )
+UPDATE alumno SET nombre ="Arcangel" WHERE nombre="Alberto"
+INSERT INTO alumno VALUES(6789, "Carolina", 3122743583, "F", "2002-05-05" )
+DELETE FROM alumno WHERE documento= 12345

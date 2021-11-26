@@ -60,3 +60,8 @@ CREATE TABLE JugadoresPartidos (
     FOREIGN KEY (DocJugador) REFERENCES jugadores (documento),
     FOREIGN KEY (IDPartido) REFERENCES partidos (IdPartido)
 );
+
+INSERT INTO partidos VALUES(12345, "Manizales", "P", "Palogrande", "2021-11-22");
+INSERT INTO partidos VALUES(13579, "Cardiff", "G", "Cardiff City Stadium", "2018-4-16")
+UPDATE partidos SET ciudad ="Cardiff ", resultado="G", estadio="Cardiff City Stadium", fecha="2018-4-16" WHERE IdPartido = 12345
+DELETE FROM partidos WHERE IdPartido= 13579
