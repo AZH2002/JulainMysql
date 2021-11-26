@@ -42,3 +42,10 @@ CREATE TABLE ArtistasDiscos (
     FOREIGN KEY (FkIdArtista) REFERENCES artistas (IdArtista),
     FOREIGN KEY (FkIdDisco) REFERENCES discos (IdDisco)
 );
+
+INSERT INTO artistas VALUES(12345, "Pierce The Veil", "Post Hardcore", 4)
+INSERT INTO artistas VALUES(6789, "Rage Against The Machine", "Trash", 3)
+UPDATE artistas SET nombre ="Sleeping With Sirens" WHERE nombre="Pierce The Veil"
+UPDATE artistas SET nombre ="Slipknot", GeneroMusical ="New Metal" 
+DELETE FROM artistas WHERE IdArtista= 6789
+DELETE FROM aritstas WHERE IdArtista = 12345
